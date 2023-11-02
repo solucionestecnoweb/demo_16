@@ -1,18 +1,6 @@
 <odoo>
   <data>
-      <record id="helpdesk_ticket_view_form_crml" model="ir.ui.view">
-          <field name="name">view.helpdesk.ticket.form.lista_contactos</field>
-          <field name="model">helpdesk.ticket</field>
-          <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
-          <field eval="16" name="priority"/>
-          <field name="arch" type="xml">
-              <data>
-                  <xpath expr="//field[@name='partner_id']" position="after">
-                      <field name="lista_contactos" class="field_lista_contactos"  widget="res_partner_many2one" />
-                  </xpath>
-              </data>
-          </field>
-      </record>
+    
        
       <record id="view_order_form_crml" model="ir.ui.view">
           <field name="name">view.sale.order.form.lista_contactos</field>

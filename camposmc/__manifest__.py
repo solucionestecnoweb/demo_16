@@ -7,7 +7,7 @@
     'description': """List Contact Sale""",
 
     'license': 'OPL-1',
-    'author': "Ing.Marilyn Millan",
+    'author': "Ing.MarilynMillan",
     'website': "www.odoo.com",
 
     'category': 'Custom Modules/Tech Training',
