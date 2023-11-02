@@ -2,7 +2,10 @@
 
 from odoo import models, fields, api
 
+class TestContacto(models.Model):
+    _inherit = 'helpdesk.ticket'
 
+    lista_contactos = fields.Many2one('res.partner', string='Contacto del Cliente', domain="['&','&',('is_company','=',False),('parent_id','=',partner_id),('type','=','contact')]")
     
 class testVenta(models.Model):
     _inherit = 'sale.order'

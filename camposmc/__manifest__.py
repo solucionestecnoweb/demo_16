@@ -1,23 +1,24 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "List Contact Sale",
+    'name': "camposmc",
 
-    'summary': """Module to view the Contacts list""",
+    'summary': """Modulo para crear campos""",
 
-    'description': """List Contact Sale""",
+    'description': """Aqui se crearan varios campos en especifico para PandaID""",
 
     'license': 'OPL-1',
-    'author': "Ing.MarilynMillan",
+    'author': "BetolotiPanda",
     'website': "www.odoo.com",
 
     'category': 'Custom Modules/Tech Training',
 
-    'depends': ['base', 'contacts', ],
+    'depends': ['base', 'helpdesk', 'contacts', 'sale_management'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
