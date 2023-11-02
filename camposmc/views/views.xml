@@ -1,19 +1,46 @@
 <odoo>
   <data>
-    
+      <record id="helpdesk_ticket_view_form_crml" model="ir.ui.view">
+          <field name="name">view.helpdesk.ticket.form.lista_contactos</field>
+          <field name="model">helpdesk.ticket</field>
+          <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+          <field eval="16" name="priority"/>
+          <field name="arch" type="xml">
+              <data>
+                  <xpath expr="//field[@name='partner_id']" position="after">
+                      <field name="lista_contactos" class="field_lista_contactos"  widget="res_partner_many2one" />
+                  </xpath>
+              </data>
+          </field>
+      </record>
+       
       <record id="view_order_form_crml" model="ir.ui.view">
-          <field name="name">view.sale.order.form.list_contact</field>
+          <field name="name">view.sale.order.form.lista_contactos</field>
           <field name="model">sale.order</field>
           <field name="inherit_id" ref="sale.view_order_form"/>
           <field eval="16" name="priority"/>
           <field name="arch" type="xml">
               <data>
                   <xpath expr="//field[@name='partner_id']" position="after">
-                      <field name="list_contact"/>
+                      <field name="lista_contactos"/>
                   </xpath>
               </data>
           </field>
       </record>
-  
+
+      <record id="view_move_form_crml" model="ir.ui.view">
+          <field name="name">view.account.move.form.lista_contactos</field>
+          <field name="model">account.move</field>
+          <field name="inherit_id" ref="account.view_move_form"/>
+          <field eval="16" name="priority"/>
+          <field name="arch" type="xml">
+              <data>
+                  <xpath expr="//field[@name='partner_id']" position="after">
+                      <field name="lista_contactos"/>
+                  </xpath>
+              </data>
+          </field>
+      </record>
+      
   </data>
 </odoo>
