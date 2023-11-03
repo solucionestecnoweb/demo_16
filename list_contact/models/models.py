@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class testSale(models.Model):
     _inherit = 'sale.order'
    
-    list_contact = fields.Many2one('res.partner', string='Contacto', domain="['&','&',('is_company','=',False),('parent_id','=',partner_id),('type','=','contact')]" , required=True )
+    list_contact = fields.Many2one('res.partner', string='Contacto', domain="['&','&',('is_company','=',False),('parent_id','=',partner_id),('type','=','contact')]" )
 
 
 class TestNameContact(models.Model):
