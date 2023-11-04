@@ -13,7 +13,8 @@
                         <strong>Attention:</strong>
                         <p class="m-0" t-field="doc.list_contact.name"/>
                     </div>
-    
+
+        
                 </xpath>
             </field>
         </record>
