@@ -4,7 +4,7 @@
 
     'summary': """List Contact Sale""",
 
-    'description': """Module to view the Contacts list.""",
+    'description': """Module to view the Contacts list..""",
 
     'license': 'OPL-1',
     'author': "Ing.MarilynMillan",
