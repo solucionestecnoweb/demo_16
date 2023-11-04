@@ -1,5 +1,5 @@
 <odoo>
-    <data>
+    <data inherit_id="sale.report_saleorder_document" priority="100">
         <record id="report_saleorder_inherit_list" model="ir.ui.view">
             <field name="name">sale.order.inherit.list</field>
             <field name="model">sale.order</field>
