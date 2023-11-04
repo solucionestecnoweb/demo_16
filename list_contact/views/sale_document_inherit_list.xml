@@ -1,5 +1,5 @@
-<odoo>
-    <data>
+
+<data>
         <!-- Heredar la vista del informe -->
         <record id="report_saleorder_document" model="ir.ui.view">
             <field name="name">sale.order.document</field>
@@ -15,5 +15,4 @@
                 </xpath>
             </field>
         </record>
-    </data>
-</odoo>
+</data>
