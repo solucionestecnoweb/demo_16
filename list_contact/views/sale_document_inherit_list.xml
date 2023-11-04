@@ -5,13 +5,15 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.report_saleorder_document" />
             <field name="arch" type="xml">
-              
-                 <xpath expr="//div[@id='informations']" position="inside">
+
+
+                <xpath expr="//div[@id='informations']" position="inside">
                     <!-- Tu nueva sección aquí -->
-                    <div t-if="doc.list_contact" class="col-auto col-3 mw-100 mb-2" name="informations_list_comtact">
+                    <div t-if="doc.list_contact" class="col-auto col-3 mw-100 mb-2" name="informations_list_contact">
                         <strong>Attention:</strong>
                         <p class="m-0" t-field="doc.list_contact.name"/>
                     </div>
+    
                 </xpath>
             </field>
         </record>
