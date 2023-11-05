@@ -1,11 +1,8 @@
-
-<data>
+<odoo>
+    <data>
         <!-- Heredar la vista del informe -->
-        <record id="report_saleorder_document" model="ir.ui.view">
-            <field name="name">sale.order.document</field>
-            <field name="model">sale.order</field>
-            <field name="inherit_id" ref="sale.report_saleorder_document" />
-            <field name="arch" type="xml">
+        <template id="report_saleorder_document_list_contact" inherit_id="sale.report_saleorder_document">
+           
                 <!-- Agregar tu nueva sección dentro del div con id 'informations' -->
                 <xpath expr="//div[@id='informations']" position="inside">
                     <div t-if="doc.list_contact" class="col-auto col-3 mw-100 mb-2" name="informations_list_contact">
@@ -13,6 +10,6 @@
                         <p class="m-0" t-field="doc.list_contact.name"/>
                     </div>
                 </xpath>
-            </field>
-        </record>
-</data>
+        </template>
+    </data>
+</odoo>
