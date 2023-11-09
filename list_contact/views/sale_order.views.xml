@@ -1,17 +1,14 @@
 <odoo>
-  <data> 
-      <record id="view_order_form_crml" model="ir.ui.view">
-          <field name="name">view.sale.order.form.list_contact</field>
+      <record id="view_sale_order_form" model="ir.ui.view">
+          <field name="name">view.sale.order.form</field>
           <field name="model">sale.order</field>
           <field name="inherit_id" ref="sale.view_order_form"/>
-          <field eval="16" name="priority"/>
           <field name="arch" type="xml">
               <data>
                   <xpath expr="//field[@name='partner_id']" position="after">
-                      <field name="list_contact"/>
+                      <field name="partner_contact_id" string='Contacto'/>
                   </xpath>
               </data>
           </field>
       </record>    
-  </data>
 </odoo>

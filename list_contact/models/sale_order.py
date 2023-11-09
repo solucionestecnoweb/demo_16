@@ -3,13 +3,13 @@
 from odoo import models, fields, api
 
    
-class testSale(models.Model):
+class SaleOrder(models.Model):
     _inherit = 'sale.order'
    
-    list_contact = fields.Many2one('res.partner', string='Contacto', domain="['&','&',('is_company','=',False),('parent_id','=',partner_id),('type','=','contact')]" )
+    partner_contact_id  = fields.Many2one('res.partner', domain="[('is_company','=',False),('parent_id','=',partner_id),('type','=','contact')]" )
 
 
-class TestNameContact(models.Model):
+class ResPartnerContact(models.Model):
     _inherit = 'res.partner'
     
     def name_get(self):

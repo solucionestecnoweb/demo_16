@@ -1,15 +1,14 @@
 <odoo>
-    <data>
+ 
         <!-- Heredar la vista del informe -->
-        <template id="report_saleorder_document_list_contact" inherit_id="sale.report_saleorder_document">
+        <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
            
                 <!-- Agregar tu nueva sección dentro del div con id 'informations' -->
                 <xpath expr="//div[@id='informations']" position="inside">
                     <div t-if="doc.list_contact" class="col-auto col-3 mw-100 mb-2" name="informations_list_contact">
                         <strong>Attention:</strong>
-                        <p class="m-0" t-field="doc.list_contact.name"/>
+                        <p class="m-0" t-field="doc.partner_contact_id.name"/>
                     </div>
                 </xpath>
         </template>
-    </data>
 </odoo>
